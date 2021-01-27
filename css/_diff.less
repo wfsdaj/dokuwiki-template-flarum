@@ -1,0 +1,144 @@
+/**
+ * This file provides styles for the diff view, which shows you
+ * differences between two versions of a page (?do=diff).
+ */
+
+.changes {
+    ul {
+        padding-left: 0;
+        list-style: none;
+        border-bottom: 1px solid @ini_border;
+    }
+
+    .li {
+        padding: 9px 0;
+        border-top: 1px solid @ini_border;
+        clear: both;
+        overflow: hidden;
+
+        .date {
+            display: inline-block;
+            padding-right: 2rem;
+        }
+        .sizechange {
+            float: right;
+            padding: 2px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+        .positive {
+            color: #1B5E20;
+            background-color: #E6FFED;
+        }
+        .negative {
+            color: #BF360C;
+            background-color: #FFEEF0;
+        }
+        .diff_link {
+            margin-right: 5px;
+        }
+        .user {
+            float: left;
+            width: 20%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+        }
+        .icon {
+            margin-right: .3125rem;
+        }
+    }
+
+    .li:hover {
+        background-color: @ini_background_alt;
+    }
+}
+
+.diffoptions {
+    padding: 1rem 0;
+    border-top: 1px solid @ini_border;
+
+    p {
+        float: right;
+        margin: 0 !important;
+    }
+}
+
+
+.diffnav {
+    width: 50%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid @ini_border;
+
+    a {
+        display: inline-block;
+        line-height: 20px;
+        padding: 7px 15px;
+        min-width: 36px;
+        min-height: 36px;
+        vertical-align: middle;
+        border: 1px solid @ini_border;
+        border-radius: 6px;
+        color: @ini_text;
+    
+        span {
+            display: none;
+        }
+    
+        &.diffbothprevrev {
+            background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA10lEQVQ4T6WT7REBQRBE32UgBDIgAkRACERACGRABMiACBABmTgRUE/tVm1xH7j9OTvd0907m9HwZA3xVBG0gBlwAK5hUBcYAWsgt1ZFkILsbQMXYAfMo/Iygi0wDiAnqeYI3IFBaruIYAJsgF4iXUKBWnhJL1Ngg5OWwCo0FREWEihTj2dAkEdCa1NAFR8ntSCBwalAwM8EEXACFv9YiPLKQuyHYCtDjCT6dWE6IXXtqewGDOueMd6bxyNMjYtkTfLaRRLgVBv3b6vsgvnEtav81T9r/BufkccvETLS/R0AAAAASUVORK5CYII=") center center no-repeat;
+        }
+        &.diffprevrev {
+            background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAsklEQVQ4T6XSbRFBYRDF8d9NgAYaEIEEaEADDZCABjQgggZoIIIIZmfuNZe57/bL83zY/e/sOSfxZyV/zmsDWOOOa35pE0AfeywwSSEfRh1giDMGmP8OB6UKEANHPNLhV5FeZYAtNtgh/qVVBAiRxljiUudSGWCEVVdALM1OiDfOaHVC1hwinnBLLWwlYgYJG0OHXgqJIH1VXQ6iOYJ0wAzTtkHKbwtXnl2iXOlkkxMqAW9ivBoRY362AwAAAABJRU5ErkJggg==") center center no-repeat;
+        }
+        &.diffnextrev {
+            background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAp0lEQVQ4T6XS6xEBUQwG0LMd6IQO0AkdUAElUAEdoAI6QCXowGTmMh77uDub/zmTfEmhYxUd+5UBI/SxzsHLgAFO2GGOex1UtUIge9wwxaUKqcughy2GCQnwr3JCXGKBVVrpC8kBoiGCjQnOGH8KbYAI9Zqwt5EDvFaIs85+Q2gKcZNGnqQVskOMM8bID0RzqzNG8xGHNHLrR4rEA4mzNVZOiLVIZ+AJovQaEdnHCVcAAAAASUVORK5CYII=") center center no-repeat;
+        }
+        &.diffbothnextrev {
+            background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA1ElEQVQ4T6WT4RHBQBCFv1RAKVQgKqADdKADSqACVIAK6IAOKCEdMC+zZy7nLpPM7b/cZL977+1eQWYVmf34gCGwBi7A08AjYAbsgSp2WahgByyAMfC2BsE+dvbHiFm4AwOvQcoEO5rCBiQGcA1nYGV/l8DNvgX6VSpEeX8EDcpnA0y9jBohhv6WwMGsuFB1+8TO6lDbxpgCyI4UtgJSFraAAE5RVIFCfAFXQCpUvULUGAWRCpUDnrqMUYukW9XsL5JADpjcg9QqzwGBO61y77eV/Rq/AcAtEbMmCKsAAAAASUVORK5CYII=") center center no-repeat;
+        }
+        &.difflastrev {
+            background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA1ElEQVQ4T6WT4RHBQBCFv1RAKVQgKqADdKADSqACVIAK6IAOKCEdMC+zZy7nLpPM7b/cZL977+1eQWYVmf34gCGwBi7A08AjYAbsgSp2WahgByyAMfC2BsE+dvbHiFm4AwOvQcoEO5rCBiQGcA1nYGV/l8DNvgX6VSpEeX8EDcpnA0y9jBohhv6WwMGsuFB1+8TO6lDbxpgCyI4UtgJSFraAAE5RVIFCfAFXQCpUvULUGAWRCpUDnrqMUYukW9XsL5JADpjcg9QqzwGBO61y77eV/Rq/AcAtEbMmCKsAAAAASUVORK5CYII=") center center no-repeat;
+        }
+    }
+}
+
+.diff {
+    .diff-lineheader {
+        font-size: 18px;
+        text-align: right;
+        vertical-align: top;
+    }
+    .diff-deletedline {
+        background-color: #FFEEF0;
+
+        strong {
+            font-weight: normal;
+            background-color: #FDB8C0;
+        }
+    }
+    .diff-addedline {
+        background-color: #E6FFED;
+
+        strong {
+            font-weight: normal;
+            background-color: #ACF2BD;
+        }
+    }
+
+    bdi {
+        display: inline-block;
+        margin-top: 1rem;
+    }
+
+    .diff-blockheader {
+        padding: 5px 0;
+        border-bottom: 1px dashed @ini_border;
+    }
+
+    .diff-context {
+        background-color: @ini_background_alt;
+        color: inherit;
+    }
+}

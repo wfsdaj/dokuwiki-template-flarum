@@ -1,0 +1,7 @@
+base     flarum
+author   laoyu
+email    wfdaj@qq.com
+date     2020-01-25
+name     flarum Template
+desc     The template that gets you started
+url      https://www.dokuwiki.org/template:flarum

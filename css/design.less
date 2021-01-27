@@ -1,0 +1,120 @@
+.pagenav {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.docInfo {
+    margin-top: 1rem;
+    padding-top: .5rem;
+    font-size: 14px;
+    color: @ini_text_neu;
+    text-align: right;
+    border-top: 1px dashed @ini_border;
+}
+
+// 草稿已保存提醒
+.draft__status {
+    float: right;
+    margin-bottom: 5px;
+    padding: 4px 8px;
+    color: #4CAF50;
+    background-color: #acf2bd;
+    border-radius: 6px;
+}
+
+// 弹出层
+.picker {
+    padding: 4px;
+    max-width: 400px;
+    border: 1px solid @ini_border;
+    border-radius: 6px;
+    background-color: @ini_background;
+
+    .pickerbutton {
+        padding: 8px 10px;
+        border: 0;
+        background-color: @ini_background;
+
+        &:hover {
+            background-color: @ini_background_alt;
+        }
+    }
+}
+
+// 注册、登录、更新个人信息表单
+.centeralign .no{
+    fieldset {
+        margin-bottom: 1rem;
+    }
+
+    .block {
+        margin-bottom: .5rem;
+
+        span {
+            display: inline-block;
+            padding-right: .5rem;
+            width: 160px;
+            text-align: right;
+        }
+    
+        .edit {
+            width: 200px;
+        }
+    }
+}
+
+#dw__profiledelete button {
+
+}
+
+// 网站地图
+.index__tree {
+    overflow: hidden;
+
+    .idx {
+        li {
+            color: @ini_text_alt;
+        }
+    }
+}
+
+// qsearch__out
+.JSpopup, #qsearch__out {
+    // padding: .5rem;
+    color: @ini_text;
+    background-color: @ini_background;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    -webkit-box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, .132), 0 1.2px 3.6px 0 rgba(0, 0, 0, .108);
+    box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, .132), 0 1.2px 3.6px 0 rgba(0, 0, 0, .108);
+}
+
+#qsearch__out {
+    top: 18px;
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    strong {
+        display: inline-block;
+        padding: 8px 15px;
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            a {
+                padding: 8px 15px;
+                display: block;
+
+                &:hover {
+                    color: inherit;
+                    background: @ini_background_alt;
+                    text-decoration: none;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}

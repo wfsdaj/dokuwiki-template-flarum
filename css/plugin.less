@@ -1,0 +1,231 @@
+/* 插件或 jquery 相关的
+********************************************************************/
+// jquery-ui-theme 弹出层背景
+.ui-widget-overlay {
+    background: rgba(0,0,0,.4);
+    backface-visibility: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: .3s;
+    transition-property: opacity, visibility;
+    will-change: opacity;
+}
+.ui-front {
+    visibility: visible;
+    opacity: 1;
+}
+.ui-widget,
+.ui-widget .ui-widget {
+    font-size: 1rem;
+}
+.ui-widget-header {
+    background-color: transparent;
+    background-image: none;
+}
+.ui-widget.ui-widget-content {
+    border: 0;
+}
+.ui-dialog {
+    width: 85%;
+    min-width: 180px;
+    max-width: 500px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+
+    .ui-dialog-title {
+        margin: 0;
+    }
+
+    .ui-dialog-titlebar {
+        padding: 12px;
+        border: 0;
+        background-color: @ini_background_alt;
+        background-image: none;
+        font-size: 1rem;
+        line-height: 24px;
+        text-align: left;
+        border-radius: 0;
+    }
+
+    .ui-dialog-titlebar-close {
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        border: 0;
+        box-shadow: none;
+        background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtElEQVQ4T62T4RHCMAiFHxs4QkfoCI7ACI7QURzBDWATdRM3wCNnvDSF2LvKz1z4eDyAcDDoYD6+AGaeHaaqjxGUmRdVvdY/KwARqZlxBmHmGxHNIlKKeaxacBUZpCab2VlVXyHAHyNIlrxRUKktBMDisvvKqYIOcgfwzJJTBZ9WimEATiNjwz1oewYwjaazAUSGjabTj7HIjnrOIO0iuduXkWEVIiLTzynsvZH/HdPeiv2/N0rkiRGIW6CFAAAAAElFTkSuQmCC") center center no-repeat;
+    }
+
+    .ui-dialog-content {
+        padding: 1rem !important;
+        font-size: .9375rem;
+        height: auto !important;
+        overflow-y: auto;
+    }
+
+    .ui-dialog-buttonpane {
+        margin: 0;
+        padding: 8px;
+    }
+
+    .ui-dialog-buttonpane button {
+        margin: 0 0 0 8px;
+    }
+}
+
+// discussion
+div.dokuwiki {
+
+    div.comment_wrapper {
+        padding: 0;
+        background-color: @ini_background;
+        border: 2px solid @ini_background_alt;
+        border-radius: 8px;
+
+        h2 {
+            margin: 0;
+            padding: 1rem;
+            font-size: 18px;
+            background-color: @ini_background_alt;
+        }
+
+        .hentry {
+            position: relative;
+            padding: 8px 1rem;
+            border-bottom: 1px solid @ini_background_alt;
+        }
+    }
+
+    .comment_head {
+        font-size: .875rem;
+        padding-top: 0;
+        margin-top: 0;
+    
+        span.author,
+        abbr.published {
+            padding: 0;
+            color: #5B7083;
+            background-image: none;
+        }
+
+        span.author {
+            color: @ini_text;
+            font-weight: 700;
+        }
+
+        abbr {
+            border-bottom: none;
+            cursor: default;
+            text-decoration: none;
+        }
+    
+        img {
+            width: 28px;
+            height: 28px;
+            border-radius: 28px;
+        }
+    }
+
+    .comment_body {
+        margin-left: 0 !important;
+        padding-left: 33px;
+        padding-top: .25rem;
+        padding-bottom: .5rem;
+        border: 0;
+
+        p {
+            padding-bottom: 0;
+        }
+    }
+
+    .comment_buttons {
+        display: flex;
+        position: absolute;
+        right: 8px;
+        top: 4px;
+        margin-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .comment_replies {
+        margin-left: 0 !important;
+        padding-left: 33px;
+    }
+
+    .comment_form {
+        margin-top: 0 !important;
+        padding: 1rem;
+    }
+
+    .comment_text {
+        padding: 0;
+        text-align: left;
+    
+        textarea {
+            height: 8rem;
+        }
+    }
+    
+}
+
+// edittable
+.dokuwiki div.editbutton_table form div.no button,
+.dokuwiki div.editbutton_table form div.no input.button {
+    margin-left: 8px;
+    padding: .3125rem 1rem;
+    height: auto;
+    line-height: 1.5;
+    font-size: .9375rem;
+}
+
+// nspages
+.nspagesPicturesModeMain {
+    display: flex;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+
+    a {
+        display: block;
+        width: 24%;
+        height: 168px;
+        -webkit-transition: all .2s linear;
+        transition: all .2s linear;
+    }
+
+    a:hover {
+        -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+    }
+
+    .nspagesPicturesModeImg {
+        position: relative;
+        width: 100%;
+        height: 168px;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        .nspagesPicturesModeTitle {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 4px 8px;
+            font-size: 15px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, .25);
+            border-radius: 0 0 4px 4px;
+        }
+    }
+}
+
+.catpageheadline {
+    display: none;
+}
+
+.addnewpage select {
+    vertical-align: baseline !important;
+}

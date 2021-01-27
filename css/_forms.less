@@ -1,0 +1,149 @@
+form {
+    display: inline;
+}
+
+input[type=submit],
+input[type=button],
+input[type=reset],
+input.button,
+a.button,
+button,
+.qq-upload-button {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 20px;
+    padding: 7px 15px;
+    border-radius: 6px;
+    color: @ini_text;
+    font-size: .9375rem;
+    border: 1px solid #d3d4d6;
+    background-color: #fafbfc;
+    box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+input[type=submit]:hover,
+input[type=submit]:active,
+input[type=submit]:focus,
+input[type=button]:hover,
+input[type=button]:active,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=reset]:active,
+input[type=reset]:hover,
+input.button:hover,
+input.button:active,
+input.button:focus,
+a.button:hover,
+a.button:active,
+a.button:focus,
+button:hover,
+button:active,
+button:focus,
+.qq-upload-button:hover {
+    background-color: #f3f4f6;
+}
+
+
+.uninstall {
+    color: #D73A49;
+
+    &:hover {
+        color: #fff;
+        background-color: #CB2431;
+        border-color: #B1242F;
+    }
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: no-drop;
+}
+
+input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+
+select {
+    display: inline-block;
+    line-height: 20px;
+    padding: 7px 28px 7px 12px;
+    font-size: .9375rem;
+    color: #495057;
+    border: 1px solid @ini_border;
+    border-radius: 6px;
+    background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: #fafbfc;
+    border: 1px solid @ini_border;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 rgba(225,228,232,0.2);
+    transition: border-color 0.15s ease-in-out;
+
+    &:focus {
+        background-color: @ini_background;
+        border-color: @ini_text_alt;
+        outline: 0;
+    }
+}
+
+.toolbar {
+    margin-bottom: 12px;
+}
+
+.toolbutton {
+    padding: 8px;
+    border: 0;
+    border-radius: 0;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.editBar {
+    #size__ctl {
+        float: right;
+    }
+
+    .summary {
+        margin-top: 1rem;
+
+        .missing {
+            background-color:#FFEEF0;
+        }
+    }
+}
+
+input.edit {
+    padding: 0.375rem .5rem;
+    font-size: .9375rem;
+    line-height: 1.5;
+    color: @ini_text_alt;
+    background-color: #fafbfc;
+    border: 1px solid @ini_border;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 rgba(225,228,232,0.2);
+    transition: border-color 0.15s ease-in-out;
+
+    &:focus {
+        color: @ini_text_alt;
+        background-color: @ini_background;
+        border-color: @ini_text_alt;
+        outline: 0;
+    }
+}

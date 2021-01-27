@@ -1,0 +1,9 @@
+.secedit {
+    float: right;
+    margin-top: -1.25rem;
+}
+
+.section_highlight {
+    /* background: repeating-linear-gradient(135deg, #eee, #eee 15px,#fff 0, #fff 30px); */
+    background-color: #f6f6f6;
+}

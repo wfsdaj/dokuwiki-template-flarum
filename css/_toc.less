@@ -1,0 +1,65 @@
+.dw__toc  {
+    width: 190px;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &>div {
+        border-left: 1px solid @ini_border;
+    }
+
+    h3 {
+        margin-top: .5rem;
+        padding: .5rem 0;
+        font-size: .9375rem;
+
+        strong {
+            float: right;
+        }
+    }
+    
+    .toc {
+        padding: 0;
+        list-style: none;
+
+        li {
+            color: @ini_border;
+            font-size: 18px;
+            margin-left: 15px;
+
+            a {
+                display: block;
+                padding: 5px 0;
+                font-size: .9375rem;
+                color: @ini_text;
+
+                &:hover {
+                    color: @ini_link;
+                }
+            }
+
+            .toc li {
+                list-style: disc;
+                color: @ini_border;
+                font-size: 13px;
+            }
+        }
+
+        // .level1:before {
+        //     content: "";
+        //     display: inline-block;
+        //     width: 10px;
+        //     height: 10px;
+        //     background-color: #000;
+        //     border-radius: 50%;
+        // }
+
+        .li {
+            margin-left: -5px;
+        }
+
+        .level1 > .li {
+            font-weight: 600;
+        }
+    }
+}
